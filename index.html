@@ -3,158 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOOD SYSTEM | V2RAYTUN | HAPP</title>
+    <title>BLOOD VLESS | Личный доступ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
     <style>
-        :root { --blood-red: #ff0000; --dark-bg: #030303; }
-        body { background-color: var(--dark-bg); color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        .sync-font { font-family: 'Syncopate', sans-serif; }
-        #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; top: 0; left: 0; }
-        
-        .glass-card { 
-            background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(10px); 
-            border: 1px solid rgba(255, 0, 0, 0.1); 
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .glass-card:hover { 
-            border-color: var(--blood-red); 
-            transform: translateY(-10px); 
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.15); 
-        }
-        
-        .glow-text { text-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
-        .red-gradient { background: linear-gradient(90deg, #660000 0%, #ff0000 100%); }
-        
-        @keyframes pulse-red {
-            0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(255, 0, 0, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
-        }
-        .status-dot { width: 10px; height: 10px; background: #00ff00; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse-red 2s infinite; }
+        :root { --blood: #ff0000; }
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        .oswald { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        .drop-shadow { filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.5)); }
+        .glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .step-num { color: var(--blood); font-weight: 800; font-size: 1.5rem; margin-bottom: 1rem; display: block;}
     </style>
 </head>
 <body>
-    <div id="particles-js"></div>
 
-    <header class="fixed w-full z-50 p-6 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="sync-font text-2xl font-bold tracking-tighter text-white">BLOOD<span class="text-red-600">.SYSTEM</span></div>
-            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
-                <a href="https://t.me/BLOODVLESS/3" class="hover:text-red-500 transition">Инструкции</a>
-                <a href="https://t.me/BLOODVLESS/2" class="hover:text-red-500 transition">Обновления</a>
-                <a href="https://t.me/BLOODVLESS/5" class="hover:text-red-500 transition">Тех.Поддержка</a>
-            </div>
-            <a href="https://t.me/BLOODVLESS/4" class="red-gradient px-6 py-2 rounded-sm text-xs font-bold tracking-tighter">ВСТУПИТЬ В ЧАТ</a>
+    <header class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
+        <div class="mb-8">
+            <svg class="drop-shadow" width="80" height="120" viewBox="0 0 30 42">
+                <path fill="#ff0000" d="M15 0C15 0 0 17.1429 0 28.2857C0 35.86 6.71573 42 15 42C23.2843 42 30 35.86 30 28.2857C30 17.1429 15 0 15 0Z"/>
+            </svg>
+        </div>
+        <h1 class="oswald text-6xl md:text-8xl mb-4 tracking-tighter">BLOOD <span class="text-red-600">VLESS</span></h1>
+        <p class="text-zinc-400 text-lg md:text-xl max-w-xl mb-12 uppercase tracking-widest font-light">
+            Приватная экосистема обхода блокировок. <br> Скорость. Анонимность. Стабильность.
+        </p>
+        <div class="flex flex-col md:flex-row gap-6">
+            <a href="tg://resolve?domain=BloodV2rayTun_bot" class="bg-white text-black px-12 py-4 font-bold rounded-sm hover:bg-red-600 hover:text-white transition duration-300">
+                ЗАПУСТИТЬ БОТА
+            </a>
+            <a href="#guides" class="border border-zinc-800 px-12 py-4 font-bold rounded-sm hover:border-red-600 transition duration-300">
+                ТУТОРИАЛЫ
+            </a>
         </div>
     </header>
 
-    <main class="relative pt-40 pb-20 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="inline-block px-4 py-1 border border-red-600/30 rounded-full text-[10px] tracking-[0.3em] uppercase mb-8 bg-red-600/10 text-red-500">
-                New Generation VLESS Protocol
+    <section class="py-24 px-6 border-y border-zinc-900 bg-zinc-950">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div>
+                <h3 class="oswald text-4xl mb-2">99.9%</h3>
+                <p class="text-zinc-500 text-sm uppercase tracking-widest">Uptime серверов</p>
             </div>
-            <h1 class="sync-font text-5xl md:text-8xl font-extrabold mb-8 leading-tight">
-                BYPASS <br> <span class="text-red-600 glow-text">CENSORSHIP</span>
-            </h1>
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
-                Персональная экосистема обхода глушилок. Моментальный доступ к YouTube, Instagram и заблокированным ресурсам без потери скорости.
+            <div>
+                <h3 class="oswald text-4xl mb-2">REALITY</h3>
+                <p class="text-zinc-500 text-sm uppercase tracking-widest">Протокол маскировки</p>
+            </div>
+            <div>
+                <h3 class="oswald text-4xl mb-2">∞ GB</h3>
+                <p class="text-zinc-500 text-sm uppercase tracking-widest">Безлимитный трафик</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="guides" class="py-24 px-6 max-w-6xl mx-auto">
+        <h2 class="oswald text-5xl mb-16 text-center">ИНСТРУКЦИИ ПО НАСТРОЙКЕ</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-lg">
+                <span class="step-num">01. ANDROID</span>
+                <p class="text-zinc-400 mb-6 text-sm">Рекомендуемое приложение: <b>v2rayTun/Happ</b></p>
+                <ul class="text-sm space-y-4 text-zinc-300">
+                    <li>• Получите ключ в нашем боте.</li>
+                    <li>• Нажмите на иконку ➕ в приложении.</li>
+                    <li>• Выберите <b>"Import config from clipboard"</b>.</li>
+                    <li>• Нажмите на сервер и кнопку подключения.</li>
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-lg">
+                <span class="step-num">02. iOS / iPhone</span>
+                <p class="text-zinc-400 mb-6 text-sm">Рекомендуемое приложение: <b>V2Box</b></p>
+                <ul class="text-sm space-y-4 text-zinc-300">
+                    <li>• Скопируйте VLESS ключ из бота.</li>
+                    <li>• Перейдите во вкладку <b>Configs</b>.</li>
+                    <li>• Нажмите <b>Add Config</b> -> Import from clipboard.</li>
+                    <li>• Выберите Blood и включите соединение.</li>
+                </ul>
+            </div>
+
+            <div class="glass p-8 rounded-lg">
+                <span class="step-num">03. PC / Windows</span>
+                <p class="text-zinc-400 mb-6 text-sm">Рекомендуемое приложение: <b>v2rayN</b></p>
+                <ul class="text-sm space-y-4 text-zinc-300">
+                    <li>• Скачайте v2rayN с GitHub.</li>
+                    <li>• Нажмите <b>Servers</b> в верхнем меню.</li>
+                    <li>• Выберите <b>"Import bulk URL from clipboard"</b>.</li>
+                    <li>• Нажмите Enter и активируйте сервер.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-red-600 text-white text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="oswald text-4xl mb-6">ПОЧЕМУ BLOOD VLESS?</h2>
+            <p class="font-medium text-lg leading-relaxed">
+                В отличие от обычных VPN, наш сервис использует технологию Reality. Это делает ваше соединение похожим на посещение обычного сайта. Провайдер не видит, что вы используете обход блокировок. Это гарантирует работу даже при самых жестких блокировках интернета.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="tg://resolve?domain=BloodV2rayTun_bot" class="red-gradient px-12 py-5 rounded-md font-bold text-sm tracking-[0.2em] hover:scale-105 transition transform uppercase">
-                    Запустить BLOOD BOT
-                </a>
-                <a href="#stats" class="px-12 py-5 border border-white/10 rounded-md font-bold text-sm tracking-[0.2em] hover:bg-white/5 transition uppercase">
-                    Статус узлов
-                </a>
-            </div>
-        </div>
-    </main>
-
-    <section id="stats" class="py-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="glass-card p-8 rounded-xl text-center">
-                    <div class="text-3xl font-bold mb-2 sync-font" id="ping-val">24ms</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-widest">Средний пинг</div>
-                </div>
-                <div class="glass-card p-8 rounded-xl text-center">
-                    <div class="text-3xl font-bold mb-2 sync-font">1.2 Gbps</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-widest">Пропускная способность</div>
-                </div>
-                <div class="glass-card p-8 rounded-xl text-center">
-                    <div class="text-3xl font-bold mb-2 sync-font text-green-500">99.9%</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-widest">Uptime серверов</div>
-                </div>
-                <div class="glass-card p-8 rounded-xl text-center border-red-600/50">
-                    <div class="text-3xl font-bold mb-2 sync-font text-red-600" id="users-val">1.4k</div>
-                    <div class="text-xs text-gray-500 uppercase tracking-widest">Активных сессий</div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white/[0.02]">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="sync-font text-3xl mb-16 text-center underline decoration-red-600 underline-offset-8">ВЫБЕРИ СВОЮ ПЛАТФОРМУ</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="glass-card p-10 rounded-2xl group">
-                    <div class="w-16 h-16 mb-6 bg-white/5 flex items-center justify-center rounded-lg group-hover:bg-red-600 transition">📱</div>
-                    <h3 class="sync-font text-xl mb-4">ANDROID</h3>
-                    <p class="text-gray-400 text-sm mb-6">Рекомендуем: <b>v2rayTun</b> или <b>HAPP</b>. Полная поддержка Reality.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.v2raytun.android" class="text-red-500 text-xs font-bold tracking-widest hover:underline uppercase">Скачать софт →</a>
-                </div>
-                <div class="glass-card p-10 rounded-2xl group">
-                    <div class="w-16 h-16 mb-6 bg-white/5 flex items-center justify-center rounded-lg group-hover:bg-red-600 transition">🍏</div>
-                    <h3 class="sync-font text-xl mb-4">iOS / MAC</h3>
-                    <p class="text-gray-400 text-sm mb-6">Рекомендуем: <b>V2Box</b> или <b>Streisand</b>. Стабильная работа на всех iPhone.</p>
-                    <a href="https://apps.apple.com/app/v2box-v2ray-client/id1641370597" class="text-red-500 text-xs font-bold tracking-widest hover:underline uppercase">Скачать софт →</a>
-                </div>
-                <div class="glass-card p-10 rounded-2xl group">
-                    <div class="w-16 h-16 mb-6 bg-white/5 flex items-center justify-center rounded-lg group-hover:bg-red-600 transition">💻</div>
-                    <h3 class="sync-font text-xl mb-4">WINDOWS</h3>
-                    <p class="text-gray-400 text-sm mb-6">Рекомендуем: <b>v2rayN</b>. Максимальная скорость для ПК и стриминга.</p>
-                    <a href="https://github.com/2dust/v2rayN/releases" class="text-red-500 text-xs font-bold tracking-widest hover:underline uppercase">Скачать софт →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-20 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-50 text-xs tracking-widest">
-            <div>© 2025 BLOOD ECOSYSTEM. ALL RIGHTS RESERVED.</div>
-            <div class="flex space-x-10 mt-6 md:mt-0">
-                <a href="https://t.me/Na4lenax" class="hover:text-red-500 transition">OWNER</a>
-                <a href="https://t.me/BLOODVLESS" class="hover:text-red-500 transition">COMMUNITY</a>
-            </div>
-        </div>
+    <footer class="py-12 text-center border-t border-zinc-900">
+        <p class="text-zinc-600 text-xs tracking-widest uppercase">© 2025 BLOOD VLESS SYSTEM. Powered by @Na4lenax</p>
     </footer>
 
-    <script>
-        // Particles.js Config
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#ff0000" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.2, "random": false },
-                "size": { "value": 2, "random": true },
-                "line_linked": { "enable": true, "distance": 150, "color": "#ff0000", "opacity": 0.1, "width": 1 },
-                "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-            },
-            "interactivity": {
-                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
-                "modes": { "repulse": { "distance": 100, "duration": 0.4 }, "push": { "particles_nb": 4 } }
-            }
-        });
-
-        // Dynamic Counters
-        setInterval(() => {
-            document.getElementById('ping-val').innerText = Math.floor(Math.random() * (45 - 20) + 20) + 'ms';
-            document.getElementById('users-val').innerText = (1.4 + (Math.random() * 0.2)).toFixed(1) + 'k';
-        }, 3000);
-    </script>
 </body>
 </html>
